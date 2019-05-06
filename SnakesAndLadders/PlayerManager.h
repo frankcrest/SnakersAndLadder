@@ -1,5 +1,5 @@
 //
-//  Player.h
+//  PlayerManager.h
 //  SnakesAndLadders
 //
 //  Created by Frank Chen on 2019-05-05.
@@ -7,19 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PlayerManager.h"
 
+@class Player;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface Player : NSObject
+@interface PlayerManager : NSObject
 
-@property NSInteger currentSquare;
-@property NSDictionary* gameLogic;
-@property NSString* output;
+@property NSMutableArray* players;
+@property NSInteger currentIndex;
 @property BOOL gameOver;
-@property NSString* name;
 
+
+-(void)createPlayers:(int)numberOfPlayers;
 -(void)roll;
+
+-(Player*)currentPlayer;
 
 @end
 

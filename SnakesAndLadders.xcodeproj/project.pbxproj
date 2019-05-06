@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E96DDA34227FB6F600F14C9C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DDA33227FB6F600F14C9C /* main.m */; };
 		E96DDA3C227FB85600F14C9C /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DDA3B227FB85600F14C9C /* Player.m */; };
+		E96DDA3F227FC92900F14C9C /* PlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E96DDA3E227FC92900F14C9C /* PlayerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		E96DDA33227FB6F600F14C9C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E96DDA3A227FB85600F14C9C /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		E96DDA3B227FB85600F14C9C /* Player.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		E96DDA3D227FC92900F14C9C /* PlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayerManager.h; sourceTree = "<group>"; };
+		E96DDA3E227FC92900F14C9C /* PlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlayerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				E96DDA33227FB6F600F14C9C /* main.m */,
 				E96DDA3A227FB85600F14C9C /* Player.h */,
 				E96DDA3B227FB85600F14C9C /* Player.m */,
+				E96DDA3D227FC92900F14C9C /* PlayerManager.h */,
+				E96DDA3E227FC92900F14C9C /* PlayerManager.m */,
 			);
 			path = SnakesAndLadders;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			files = (
 				E96DDA3C227FB85600F14C9C /* Player.m in Sources */,
 				E96DDA34227FB6F600F14C9C /* main.m in Sources */,
+				E96DDA3F227FC92900F14C9C /* PlayerManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

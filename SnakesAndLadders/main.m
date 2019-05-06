@@ -7,16 +7,34 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Player.h"
+#import "PlayerManager.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
        
-        Player* newPlayer = [[Player alloc]init];
+        PlayerManager* playerManager = [[PlayerManager alloc]init];
         
-        NSLog(@"Type roll or r to start the Snake & Ladder game");
+        BOOL playersHaveBeenCreated = NO;
         
-        while (![newPlayer gameOver]) {
+        while (!playersHaveBeenCreated) {
+            NSLog(@"Enter the number of players:");
+            
+            char userInput[255];
+            fgets(userInput, 255, stdin);
+            NSString* userInputString = [NSString stringWithUTF8String:userInput];
+            userInputString = [userInputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            
+            if ([userInputString intValue]) {
+                [playerManager createPlayers:[userInputString intValue]];
+                playersHaveBeenCreated = YES;
+            } else{
+                NSLog(@"Please enter a correct integer value for number of players");
+            }
+        }
+        
+        NSLog(@"Type roll or r to start the Snake & Ladder game:");
+        
+        while (![playerManager gameOver]) {
             char userInput[255];
             fgets(userInput, 255, stdin);
             NSString* userInputString = [NSString stringWithUTF8String:userInput
@@ -24,10 +42,10 @@ int main(int argc, const char * argv[]) {
             userInputString = [userInputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             
             if ([userInputString isEqualToString:@"roll"] || [userInputString isEqualToString:@"r"]) {
-                [newPlayer roll];
+                [playerManager roll];
             }
             
-            if ([newPlayer gameOver] == YES) {
+            if (playerManager.gameOver == YES) {
                 break;
             }
         }

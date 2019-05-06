@@ -22,9 +22,10 @@
     
     if (_currentSquare >= 100) {
         _gameOver = YES;
-        _output = [NSString stringWithFormat:@"You won the game!"];
+        _output = [NSString stringWithFormat:@"%@ rolled a %ld \n %@ landed on %ld",_name,diceValue,_name, _currentSquare];
+        _output = [_output stringByAppendingString:@" You won the game!"];
     } else {
-    _output = [NSString stringWithFormat:@"You rolled a %ld \n You landed on %ld", diceValue, _currentSquare];
+    _output = [NSString stringWithFormat:@"%@ rolled a %ld \n %@ landed on %ld",_name,diceValue,_name, _currentSquare];
     }
     NSLog(@"%@", _output);
 }
